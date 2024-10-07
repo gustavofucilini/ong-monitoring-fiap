@@ -60,7 +60,7 @@ Você precisa ter o **Node.js** instalado na sua máquina. Se não tiver o Node.
 
     yarn dev
     ```	
-    Isso irá iniciar a aplicação no modo de desenvolvimento. Você pode acessá-la em http://localhost:3000.
+    Isso irá iniciar a aplicação no modo de desenvolvimento. Você pode acessá-la em http://localhost:5173.
 5. **Caso queira construir o projeto para produção, execute o comando:**
     Agora você pode iniciar o servidor de desenvolvimento utilizando o seguinte comando:
     ```bash
