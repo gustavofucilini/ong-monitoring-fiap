@@ -1,4 +1,4 @@
-const SettingsMenu = () => {
+const SettingsMenu = ({ selectedItem, setSelectedItem }) => {
     const menuItems = [
       { name: 'ONGs', description: 'ONGs list' },
       { name: 'Donators', description: 'Manage your donators, etc' },
@@ -10,7 +10,8 @@ const SettingsMenu = () => {
         {menuItems.map((item, index) => (
           <div
             key={index}
-            className={`p-4 rounded-lg cursor-pointer ${item.name === 'Food Management' ? 'bg-orange-500' : 'bg-gray-800 hover:bg-gray-700'}`}
+            className={`p-4 rounded-lg cursor-pointer ${item.name === selectedItem ? 'bg-orange-500' : 'bg-gray-800 hover:bg-gray-700'}`}
+            onClick={() => setSelectedItem(item.name)}
           >
             <h4 className="text-lg font-semibold">{item.name}</h4>
             <p className="text-gray-400">{item.description}</p>

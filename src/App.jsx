@@ -12,7 +12,7 @@ function App() {
       <Router>
         <Sidebar />
 
-        <div className="flex-grow overflow-auto">
+        <div className="flex-grow overflow-auto" style={{ backgroundColor: '#111827' }}>
           <Routes>
             <Route path="/" element={<LogisticManagement />} />
             <Route path="/food-donation" element={<FoodDonationRegistration />} />

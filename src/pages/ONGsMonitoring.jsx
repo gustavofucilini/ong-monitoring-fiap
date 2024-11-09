@@ -1,7 +1,11 @@
 import SettingsMenu from '../components/SettingsMenu';
 import DonatedFoodList from '../components/DonatedFoodList';
+import { useState } from 'react';
+import Donators from '@/components/Donators';
+import ONGs from '@/components/ongs';
 
 const ONGsMonitoring = () => {
+  const [selectedItem, setSelectedItem] = useState('Food Management');
   return (
     <div className="flex h-screen">
       <div className="flex-1 p-6 bg-gray-900 text-white">
@@ -11,12 +15,14 @@ const ONGsMonitoring = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-1">
-            <SettingsMenu />
+            <SettingsMenu selectedItem={selectedItem} setSelectedItem={setSelectedItem} />
           </div>
 
           <div className="md:col-span-2">
             <h2 className="text-xl text-white font-semibold mb-4">Food Donated History</h2>
-            <DonatedFoodList />
+            {selectedItem === 'Food Management' && <DonatedFoodList />}
+            {selectedItem === 'Donators' && <Donators />}
+            {selectedItem === 'ONGs' && <ONGs />}
           </div>
         </div>
 
