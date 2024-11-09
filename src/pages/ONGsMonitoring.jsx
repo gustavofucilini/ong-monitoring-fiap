@@ -2,7 +2,7 @@ import SettingsMenu from '../components/SettingsMenu';
 import DonatedFoodList from '../components/DonatedFoodList';
 import { useState } from 'react';
 import Donators from '@/components/Donators';
-import ONGs from '@/components/ongs';
+import ONGs from '@/components/ONGs';
 
 const ONGsMonitoring = () => {
   const [selectedItem, setSelectedItem] = useState('Food Management');
